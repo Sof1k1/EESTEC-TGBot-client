@@ -1,4 +1,4 @@
-.customElement#projects > .old > .content > .project {
+.customElement#projects > .new > .content > .project {
     position: relative;
 
     display: flex;
@@ -23,7 +23,54 @@
     z-index: 1;
 }
 
-.customElement#projects > .old > .content > .project > .preview {
+.customElement#projects > .new > .content > .project > button.toggle {
+    position: relative;
+
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100%);
+    height: calc(5%);
+
+    margin: 10px 0px 10px 0px;
+    padding: 0px;
+
+    border: none;
+    background: rgba(40, 40, 40, 1);
+    border-radius: 30px 30px 30px 30px;
+
+    z-index: 99999;
+}
+
+.customElement#projects > .new > .content > .project > button.toggle > span {
+    color: rgba(180, 180, 180, 0.8);
+
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 3vw;
+    line-height: 3vw;
+    letter-spacing: 0px;
+    font-weight: 400;
+    text-shadow: 0 0px 2px rgb(255 255 255 / 45%);
+
+    transition: all 0.2s linear;
+}
+
+.customElement#projects > .new > .content[is-active='true'] > .project > button.toggle > span {
+    transform: rotateX(180deg);
+}
+
+.customElement#projects > .new > .content > .project > .preview {
     position: relative;
 
     display: flex;
@@ -37,7 +84,7 @@
     align-items: center;
 
     width: calc(100%);
-    height: 250px;
+    height: 150px;
 
     margin: 10px 0px 10px 0px;
     padding: 0px;
@@ -49,7 +96,7 @@
     z-index: 1;
 }
 
-.customElement#projects > .old > .content > .project > .preview > .head {
+.customElement#projects > .new > .content > .project > .preview > .head {
     position: relative;
 
     display: flex;
@@ -73,7 +120,7 @@
 
     z-index: 1;
 }
-.customElement#projects > .old > .content > .project > .preview > .head::after {
+.customElement#projects > .new > .content > .project > .preview > .head::after {
     position: absolute;
 
     top: 100%;
@@ -95,7 +142,7 @@
     transform: translateX(-50%);
 }
 
-.customElement#projects > .old > .content > .project > .preview > .head > .title {
+.customElement#projects > .new > .content > .project > .preview > .head > .title {
     position: relative;
 
     display: flex;
@@ -119,7 +166,7 @@
 
     z-index: 1;
 }
-.customElement#projects > .old > .content > .project > .preview > .head > .title > span {
+.customElement#projects > .new > .content > .project > .preview > .head > .title > span {
     color: rgba(180, 180, 180, 0.8);
 
     font-family: 'Noto Sans', sans-serif;
@@ -134,84 +181,7 @@
     text-shadow: 0 0px 2px rgb(255 255 255 / 15%);
 }
 
-.customElement#projects > .old > .content > .project > .preview > .head > .kpi {
-    position: relative;
-
-    display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    width: auto;
-    height: calc(100%);
-
-    margin: 0px;
-    padding: 0px;
-
-    border: none;
-    background: none;
-
-    z-index: 1;
-}
-.customElement#projects > .old > .content > .project > .preview > .head > .kpi > span {
-    color: rgba(180, 180, 180, 0.8);
-
-    font-family: 'Noto Sans', sans-serif;
-    text-transform: none;
-    text-decoration: none;
-    text-align: left;
-
-    font-size: 4vw;
-    line-height: 4vw;
-    letter-spacing: 0px;
-    font-weight: 500;
-    text-shadow: 0 0px 2px rgb(255 255 255 / 15%);
-}
-
-.customElement#projects > .old > .content > .project > .preview > .info {
-    position: relative;
-
-    display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    width: calc(100%);
-    height: calc(95%);
-
-    margin: 10px 0px 10px 0px;
-    padding: 0px 20px 0px 20px;
-
-    border: none;
-    background: none;
-
-    z-index: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.customElement#projects > .old > .content > .project > .preview > .info::-webkit-scrollbar {
-    display: none;
-    width: 0px;
-}
-.customElement#projects > .old > .content > .project > .preview > .info::-webkit-scrollbar-track {
-    display: none;
-}
-.customElement#projects > .old > .content > .project > .preview > .info::-webkit-scrollbar-thumb {
-    display: none;
-}
-
-.customElement#projects > .old > .content > .project > .preview > .info > .mainuser {
+.customElement#projects > .new > .content > .project > .preview > .mainuser {
     position: relative;
 
     display: flex;
@@ -225,10 +195,10 @@
     align-items: flex-start;
 
     width: calc(100%);
-    height: max-content;
+    height: calc(10%);
 
-    margin: 10px 0px 15px 0px;
-    padding: 0px;
+    margin: 15px 0px 15px 0px;
+    padding:  0px 20px 0px 20px;
 
     border: none;
     background: none;
@@ -236,7 +206,7 @@
     z-index: 1;
 }
 
-.customElement#projects > .old > .content > .project > .preview > .info > .mainuser > .name {
+.customElement#projects > .new > .content > .project > .preview > .mainuser > .name {
     position: relative;
 
     display: flex;
@@ -260,7 +230,7 @@
 
     z-index: 1;
 }
-.customElement#projects > .old > .content > .project > .preview > .info > .mainuser > .name > span {
+.customElement#projects > .new > .content > .project > .preview > .mainuser > .name > span {
     color: rgba(255, 57, 57, 0.85);
 
     font-family: 'Noto Sans', sans-serif;
@@ -275,7 +245,7 @@
     text-shadow: 0 0px 2px rgb(255 255 255 / 10%);
 }
 
-.customElement#projects > .old > .content > .project > .preview > .info > .users {
+.customElement#projects > .new > .content > .project > .preview > button.toggle {
     position: relative;
 
     display: flex;
@@ -285,56 +255,39 @@
     display: -webkit-flex;
 
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    width: calc(100%);
-    height: max-content;
-
-    margin: 0px;
-    padding: 0px;
-
-    border: none;
-    background: none;
-
-    z-index: 1;
-}
-
-.customElement#projects > .old > .content > .project > .preview > .info > .users > .name {
-    position: relative;
-
-    display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-
-    flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 
-    width: calc(100%);
-    height: 20px;
+    width: calc(90%);
+    height: calc(20%);
 
-    margin: 0px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
     padding: 0px;
 
     border: none;
-    background: none;
+    background: rgba(180, 180, 180, 0.8);
+    border-radius: 30px 30px 30px 30px;
 
-    z-index: 1;
+    z-index: 99999;
 }
-.customElement#projects > .old > .content > .project > .preview > .info > .users > .name > span {
+
+.customElement#projects > .new > .content > .project > .preview > button.toggle > span {
     color: rgba(180, 180, 180, 0.8);
 
     font-family: 'Noto Sans', sans-serif;
     text-transform: none;
     text-decoration: none;
-    text-align: left;
+    text-align: center;
 
-    font-size: 3.6vw;
-    line-height: 5vw;
+    font-size: 3vw;
+    line-height: 3vw;
     letter-spacing: 0px;
     font-weight: 400;
-    text-shadow: 0 0px 2px rgb(255 255 255 / 10%);
+    text-shadow: 0 0px 2px rgb(255 255 255 / 45%);
+
+    transition: all 0.2s linear;
+}
+
+.customElement#projects > .new > .content[is-active='true'] > .project > .preview > button.toggle > span {
+    transform: rotateX(180deg);
 }
